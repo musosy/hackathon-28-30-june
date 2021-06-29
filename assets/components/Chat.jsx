@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
-import Gig from "./Gig";
-import Category from "./Category";
+import ChannelSelector from "./Chat/ChannelSelector";
+
 
 const Chat = () => {
     return (
         <section id="chat">
             <div className="contrainer p-3">
-                <h1>Chat</h1>
+                <ChannelSelector />
             </div>
         </section>
     )

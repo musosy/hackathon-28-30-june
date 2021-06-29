@@ -5,3 +5,14 @@ body {
 .card {
     width: 24rem;
 }
+
+.channels {
+    width: 20vw;
+}
+
+.gig-btn {
+    width: 100%;
+    border-radius: 0;
+    border: 1px black solid;
+}
+

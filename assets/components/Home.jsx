@@ -1,40 +1,12 @@
-import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Chat from "./Chat";
+import User from "./User";
 
 const Home = () => {
-  const [user, setUser] = useState([]);
-  const [isUserLoading, setIsUserLoading] = useState(true);
-
-  const fetchCurrentUser = async () => {
-    const result = await axios('/user');
-    setUser(result.data);
-    setIsUserLoading(false);
-  }
-    /* const [gigs, setGigs] = useState([]);
-    const [isGigLoading, setIsGigLoading] = useState(true);
-    const [categories, setCategories] = useState([]);
-    const [isCategoryLoading, setIsCategoryLoading] = useState(true);
-
-    const fetchGigs = async () => {
-        const result = await axios('/gig/all');
-        setGigs(result.data);
-        setIsGigLoading(false);
-    }
-
-    const fetchCategories = async () => {
-      const result = await axios('/category/all');
-        setCategories(result.data);
-        setIsCategoryLoading(false);
-    }
- */
-    useEffect(() => {
-        fetchCurrentUser();
-    }, []);
 
     return (
     <section id="home">
-      <h1>Welcome {user.name} </h1>
+      <User/>
       <Chat/>
       {/* <div className="container mt-5">
         <section id="gigs_list">
