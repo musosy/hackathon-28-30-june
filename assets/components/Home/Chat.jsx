@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
-import ChannelSelector from "./Chat/ChannelSelector";
-
+import MessageContainer from './Chat/MessageContainer';
 
 const Chat = () => {
+    const [chats, setChats] = useState([]);
+
     return (
         <section id="chat">
-            <div className="contrainer p-3">
-                <ChannelSelector />
+            <div className="contrainer">
+            {
+            }
             </div>
         </section>
     )

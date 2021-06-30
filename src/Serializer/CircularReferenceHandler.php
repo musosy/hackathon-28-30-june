@@ -3,7 +3,9 @@
 namespace App\Serializer;
 
 use App\Entity\Category;
+use App\Entity\Channel;
 use App\Entity\Gig;
+use App\Entity\Message;
 use App\Entity\Service;
 use App\Entity\User;
 use Symfony\Component\Routing\RouterInterface;
@@ -28,6 +30,10 @@ class CircularReferenceHandler
                 return $this->router->generate("service_one", ['id' => $object->getId()]);
             case $object instanceof User:
                 return $this->router->generate("user_one", ['id' => $object->getId()]);
+            case $object instanceof Channel:
+                return $this->router->generate("channel_one", ['id' => $object->getId()]);
+            case $object instanceof Message:
+                return $this->router->generate("message_one", ['id' => $object->getId()]);
         }
     }
 }
